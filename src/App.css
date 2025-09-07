@@ -1,0 +1,222 @@
+/* General Body */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  margin: 0;
+  padding: 0;
+}
+
+/* App Container */
+
+.home {
+  position: fixed;             
+  top: 20px;                   
+  left: 50%;                   
+  transform: translateX(-50%); 
+  width: 90%;                  
+  max-width: 700px;            
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  animation: fadeIn 0.8s ease-in-out;
+  z-index: 1000;               
+  overflow-y: auto;           
+  max-height: 90vh;            
+}
+
+.home h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Form */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.todo-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.todo-form input[type="text"]:focus {
+  border-color: #2193b0;
+  outline: none;
+  box-shadow: 0 0 5px #2193b0;
+}
+
+.todo-form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.todo-form button {
+  padding: 10px 20px;
+  border: none;
+  background: #2193b0;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo-form button:hover {
+  background: #176782;
+  transform: scale(1.05);
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #f0f0f0;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background: #ddd;
+}
+
+.filters button.active {
+  background: #2193b0;
+  color: white;
+}
+
+.date-range {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+  background: #f0f0f0;
+}
+
+.task-card.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Edit Input */
+.edit-input {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-right: 6px;
+}
+
+/* Actions */
+.actions button {
+  margin-left: 5px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  transform: scale(1.1);
+}
+
+.actions button:first-child {
+  background: #ffc107;
+  color: #333;
+}
+
+.actions button:first-child:hover {
+  background: #e0a800;
+}
+
+.actions button:last-child {
+  background: #dc3545;
+  color: white;
+}
+
+.actions button:last-child:hover {
+  background: #b02a37;
+}
+
+/* Empty Message */
+.task-list p {
+  text-align: center;
+  color: gray;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .home {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .todo-form {
+    flex-direction: column;
+  }
+
+  .todo-form button {
+    width: 100%;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .date-range {
+    flex-direction: column;
+  }
+}

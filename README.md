@@ -1,15 +1,45 @@
-# React + Vite
+# React Todo App Enhancement
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+This project enhances a basic React Todo application by adding **priority management** and **date-based filtering** features. The app allows users to create, manage, and filter tasks with improved UI clarity and flexibility.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Enhancements Implemented
+- **TaskCard Component**
+  - Displays task details with an attached **priority badge**.
+  - Shows due date for each task.
 
-## Expanding the ESLint configuration
+- **PriorityBadge Component**
+  - Customizable priority levels (`High`, `Medium`, `Low`).
+  - Color-coded labels for easy identification.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **FilterBar Component**
+  - Provides filters for tasks:  
+    - `All` – Show all tasks  
+    - `Today` – Show tasks due today  
+    - `Upcoming` – Show tasks with future due dates  
+    - `Overdue` – Show tasks with past due dates  
+
+- **State Management**
+  - Implemented using React hooks (`useState`).
+  - Filtering logic applied dynamically based on user selection.
+
+- **Unit Tests**
+  - Basic tests added using **React Testing Library**.
+  - Verified rendering of components and filter buttons.
+
+---
+
+## 🛠 Tech Stack
+- **React.js**
+- **TailwindCSS** for styling
+- **React Testing Library** & **Jest** for unit testing
+
+---
+
+## 📂 Project Structure
+
 # React Todo Enhancement
 
 ## Features

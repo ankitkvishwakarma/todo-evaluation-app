@@ -22,5 +22,5 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Run the App
 ```bash
 npm install
-npm start
+npm run dev
 

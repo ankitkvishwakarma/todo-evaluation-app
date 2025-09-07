@@ -33,7 +33,7 @@ This project enhances a basic React Todo application by adding **priority manage
 
 ## 🛠 Tech Stack
 - **React.js**
-- **TailwindCSS** for styling
+- **CSS** for styling
 - **React Testing Library** & **Jest** for unit testing
 
 ---
